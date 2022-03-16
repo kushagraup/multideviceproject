@@ -5,8 +5,7 @@ A basic TODO app for MDP Project.
 ## Features
 
 - Authentication is provided. User has to make a account first.
-- Lets the user Create, Read, Update and Delete (CRUD) queries in a society/ Community in real time.
-- Provided with all Sqlite type operations.
+- Lets the user Create, Read, Update and Delete (CRUD) queries in real time.
 - Complete Backend support.
 - Dart Ui Theme.
 
