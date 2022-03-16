@@ -1,12 +1,7 @@
 # TODO-App-with-FirebaseFirestore
-A basic TODO app focused mainly on CRUD operations in the firebasefirestore. This also haveber m enabled via mail &amp; password/google authentication and also phone number.
+A basic TODO app for MDP Project.
 
 
-The App has a sign in page where users can login with their google account or their mobile number. Users can also create an account with a mail id and password and login with it.
-
-# Splash Screen 
-
-![Screenshot_1643393577]()
 
 
 # Sign In Page
