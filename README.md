@@ -1,4 +1,4 @@
-# TODO-App-with-FirebaseFirestore
+# MDP project with firebase auth and Firestore
 A basic TODO app for MDP Project.
 
 
