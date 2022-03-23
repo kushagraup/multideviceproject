@@ -11,7 +11,7 @@ A basic TODO app for MDP Project.
 
 
 ## Download
-[![Android](https://play.google.com/store/apps/details?id=com.kushagra.mdpproject.mdpproject)
+[![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.kushagra.mdpproject.mdpproject)
 
  
 # Sign In Page
