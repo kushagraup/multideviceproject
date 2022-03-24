@@ -52,7 +52,6 @@ Clone the project
 ```
 
 Install dependencies
-Setup firebase download google-services.json after setting up app for android.
 
 ```bash
   flutter pub get
