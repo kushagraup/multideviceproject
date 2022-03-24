@@ -3,8 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 final CollectionReference _mainCollection = _firestore.collection('notes');
 
-class Database {
-  Database({required this.uid});
+class Databasefirebase {
+  Databasefirebase({required this.uid});
   final String? uid;
   Future<void> addItem({required String title}) async {
     DocumentReference documentReference =
@@ -15,7 +15,7 @@ class Database {
     };
     await documentReference
         .set(data)
-        .whenComplete(() => print("cool"))
+        .whenComplete(() => print("done"))
         .catchError((e) => print(e));
   }
 
@@ -43,7 +43,7 @@ class Database {
         _mainCollection.doc(uid).collection('tasks').doc(id);
     await docRef
         .delete()
-        .whenComplete(() => print("item deleted"))
+        .whenComplete(() => print("deleted"))
         .catchError((e) => print(e));
   }
 }

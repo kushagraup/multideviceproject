@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mdpproject/Services/email.dart';
-import 'package:mdpproject/Widgets/roundedbutton.dart';
-import 'package:mdpproject/Widgets/textfield.dart';
+import 'package:mdpproject/Resources/auth.dart';
+import 'package:mdpproject/Resources/Widgets/custom_button.dart';
+import 'package:mdpproject/Resources/Widgets/custom_inputfield.dart';
 
 import '../main.dart';
 
@@ -40,7 +40,7 @@ class _EmailState extends State<Email> {
                 child: Padding(
                   padding: const EdgeInsets.all(15),
                   child: Image(
-                    image: AssetImage('images/sign.png'),
+                    image: AssetImage('images/3.png'),
                     height: size.height * 0.3,
                     width: size.width * 0.7,
                   ),
@@ -78,7 +78,7 @@ class _EmailState extends State<Email> {
                           } else {
                             myFocus.unfocus();
                             Navigator.pushReplacement(context,
-                                MaterialPageRoute(builder: (_) => Home()));
+                                MaterialPageRoute(builder: (_) => loginhome()));
                           }
                         }),
                   )

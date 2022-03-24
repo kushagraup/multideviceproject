@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mdpproject/Services/database.dart';
+import 'package:mdpproject/Resources/dbcrud.dart';
 import 'package:mdpproject/main.dart';
 
-class Todo extends StatelessWidget {
+class crudmdp extends StatelessWidget {
   TextEditingController _textFieldController = TextEditingController();
-  Todo({required this.uid, required this.auth});
+  crudmdp({required this.uid, required this.auth});
   final String? uid;
   final FirebaseAuth auth;
   @override
@@ -26,7 +26,7 @@ class Todo extends StatelessWidget {
               await auth.signOut();
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (_) {
-                return Home();
+                return loginhome();
               }));
             },
             child: Text(
@@ -38,7 +38,7 @@ class Todo extends StatelessWidget {
         body: _getTasks(),
         floatingActionButton: FloatingActionButton(
           onPressed: () => _displayDialog(context, "Add Tasks", () {
-            Database(uid: uid).addItem(title: _textFieldController.text);
+            Databasefirebase(uid: uid).addItem(title: _textFieldController.text);
             Navigator.pop(context);
             _textFieldController.clear();
           }, "Submit"),
@@ -52,7 +52,7 @@ class Todo extends StatelessWidget {
   Widget _getTasks() {
     bool check = false;
     return StreamBuilder(
-        stream: Database(uid: uid).readItems(),
+        stream: Databasefirebase(uid: uid).readItems(),
         builder: (_, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (snapshot.hasError) {
             return Text("Something Went Wrong");
@@ -80,7 +80,7 @@ class Todo extends StatelessWidget {
                             child: Icon(Icons.delete, color: Colors.white),
                           ),
                           onDismissed: (direction) {
-                            Database(uid: uid).deleteItem(id: doc.id);
+                            Databasefirebase(uid: uid).deleteItem(id: doc.id);
                             print(doc.id);
                           },
                           key: UniqueKey(),
@@ -95,7 +95,7 @@ class Todo extends StatelessWidget {
                                 child: Icon(FontAwesomeIcons.edit),
                                 onTap: () {
                                   _displayDialog(_, "Edit Tasks", () {
-                                    Database(uid: uid).updateItem(
+                                    Databasefirebase(uid: uid).updateItem(
                                         title: _textFieldController.text,
                                         id: doc.id);
                                     Navigator.pop(_);

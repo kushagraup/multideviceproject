@@ -2,13 +2,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mdpproject/Services/email.dart';
+import 'package:mdpproject/Resources/auth.dart';
 import 'package:splashscreen/splashscreen.dart';
-
-import 'Screens/email_auth.dart';
-import 'Screens/todo.dart';
-import 'Widgets/roundedbutton.dart';
-import 'Widgets/textfield.dart';
+import 'pages/login_screen.dart';
+import 'pages/homepage.dart';
+import 'Resources/Widgets/custom_button.dart';
+import 'Resources/Widgets/custom_inputfield.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,28 +21,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Splash(),
+      home: Loadingpage(),
       theme: ThemeData.light(),
     );
   }
 }
 
-class Splash extends StatelessWidget {
-  const Splash({Key? key}) : super(key: key);
+class Loadingpage extends StatelessWidget {
+  const Loadingpage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
       backgroundColor: Color(0xff222831),
       seconds: 5,
-      navigateAfterSeconds: Home(),
+      navigateAfterSeconds: loginhome(),
       title: Text("To-Do List",
           style: GoogleFonts.oswald(
             fontSize: 40,
             color: Colors.white,
           )),
       image: Image.asset(
-        'images/splash.png',
+        'images/1.png',
       ),
       photoSize: 100,
       loaderColor: Color(0xff00ADB5),
@@ -51,12 +50,12 @@ class Splash extends StatelessWidget {
   }
 }
 
-class Home extends StatefulWidget {
+class loginhome extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _loginhomeState createState() => _loginhomeState();
 }
 
-class _HomeState extends State<Home> {
+class _loginhomeState extends State<loginhome> {
   final FocusNode myfocus = FocusNode();
   final AuthenticationServices _auth = AuthenticationServices();
   final TextEditingController _emailController = TextEditingController();
@@ -85,7 +84,7 @@ class _HomeState extends State<Home> {
               Center(
                 child: Image(
                   image: AssetImage(
-                    'images/login.png',
+                    'images/2.png',
                   ),
                   height: size.height * 0.3,
                   width: size.width * 0.7,
@@ -130,7 +129,7 @@ class _HomeState extends State<Home> {
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (_) => Todo(
+                                  builder: (_) => crudmdp(
                                         uid: _auth.getUid(),
                                         auth: _auth.user(),
                                       )));

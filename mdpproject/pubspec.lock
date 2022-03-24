@@ -177,27 +177,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.3.1"
-  google_sign_in:
-    dependency: "direct main"
-    description:
-      name: google_sign_in
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.2.4"
-  google_sign_in_platform_interface:
-    dependency: transitive
-    description:
-      name: google_sign_in_platform_interface
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.2"
-  google_sign_in_web:
-    dependency: transitive
-    description:
-      name: google_sign_in_web
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.10.0+5"
   http:
     dependency: transitive
     description:
@@ -219,13 +198,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.17.0"
-  intl_phone_field:
-    dependency: "direct main"
-    description:
-      name: intl_phone_field
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.1.0"
   js:
     dependency: transitive
     description:
@@ -261,13 +233,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  otp_text_field:
-    dependency: "direct main"
-    description:
-      name: otp_text_field
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.2"
   path:
     dependency: transitive
     description:
@@ -345,13 +310,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
-  quiver:
-    dependency: transitive
-    description:
-      name: quiver
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.1+1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -426,7 +384,7 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.4.1"
+    version: "2.4.4"
   xdg_directories:
     dependency: transitive
     description:
