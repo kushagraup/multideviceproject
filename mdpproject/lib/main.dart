@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mdpproject/Resources/auth.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'pages/login_screen.dart';
+import 'pages/new_user.dart';
 import 'pages/homepage.dart';
 import 'Resources/Widgets/custom_button.dart';
 import 'Resources/Widgets/custom_inputfield.dart';

@@ -38,7 +38,8 @@ class crudmdp extends StatelessWidget {
         body: _getTasks(),
         floatingActionButton: FloatingActionButton(
           onPressed: () => _displayDialog(context, "Add Tasks", () {
-            Databasefirebase(uid: uid).addItem(title: _textFieldController.text);
+            Databasefirebase(uid: uid)
+                .addItem(title: _textFieldController.text);
             Navigator.pop(context);
             _textFieldController.clear();
           }, "Submit"),
